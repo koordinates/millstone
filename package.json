@@ -23,8 +23,6 @@
         "step": "~0.0.5",
         "generic-pool": "~2.4.1",
         "request": "2.x",
-        "srs": "1.x",
-        "zipfile": "~0.5.5",
         "sqlite3": "4.1.0",
         "mime": "~1.2.11",
         "mkdirp": "~0.5.0",
@@ -38,5 +36,11 @@
     },
     "scripts": {
         "test": "mocha -R spec --timeout 10000"
+    },
+    "pnpm": {
+        "overrides": {
+            "node-pre-gyp": "@mapbox/node-pre-gyp",
+            "sqlite3@<5.0": "^5.0.0"
+        }
     }
 }
